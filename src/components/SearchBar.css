@@ -1,0 +1,39 @@
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+.searchBar__form{
+    height: 200px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.textBox{
+    margin: 5px;
+    height: 30px;
+    width: 400px;
+}
+.submitButton{
+    margin: 5px;
+    height: 35px;
+    border-radius: 5px;
+    width: 60px;
+}
+
+
+.submitButton:hover{
+    cursor: pointer;
+}
