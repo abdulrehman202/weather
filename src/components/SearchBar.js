@@ -13,7 +13,7 @@ function SearchBar(){
             
             <form className='searchBar__form'>
                 <div className='form__inputs'>
-                <input className='textBox' type= 'text' value='Enter city name'></input>
+                <input className='textBox' type= 'text' placeholder='Enter city name'></input>
                 <button className='submitButton' onClick={fetchData}>
                     Go
                 </button>
