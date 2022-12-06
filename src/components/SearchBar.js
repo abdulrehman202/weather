@@ -2,14 +2,22 @@ import React from 'react';
 import './SearchBar.css';
 
 function SearchBar(){
+    
+    function fetchData()
+    {
+        
+    }
+
     return(
         <div className='searchBar'>
             
             <form className='searchBar__form'>
-                <input className='textBox' type= 'text'></input>
-                <button className='submitButton' type = 'submit'>
+                <div className='form__inputs'>
+                <input className='textBox' type= 'text' value='Enter city name'></input>
+                <button className='submitButton' onClick={fetchData}>
                     Go
                 </button>
+                </div>
             </form>
 
         </div>
