@@ -39,6 +39,11 @@ function SearchBar(){
                 </div>
             </form>
 
+            <div className='weather_info'>
+                <h1 >{cityName}</h1>
+                
+            </div>
+
         </div>
     );
 }
