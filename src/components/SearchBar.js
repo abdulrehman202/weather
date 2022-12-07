@@ -20,7 +20,7 @@ function SearchBar(){
 
     async function fetchData()
     {
-        let api = 'https://api.open-meteo.com/v1/forecast?latitude=31.42&longitude=73.12&hourly=temperature_2m';
+        let api = 'http://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid=67d1126fa2640c2d2cf4ff6700f0e1cb';
         //This function makes the api call and returns the fetched Data
         let response = await fetch(api);
         let data = await response.json();
