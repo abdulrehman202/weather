@@ -12,13 +12,36 @@
 
 }
 
+.weather__Card{
+    float: left;
+    width: 46%;
+    margin: 10px;
+}
+
+.outer__weather{
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.inner__weather{
+    display: block;
+    height: 50%;
+    width: 100%;
+}
 .weather_info{
+    background-image: url('../images/windy.jpg');     
+    background-size: cover;
     background-color: white;
     float: left;
     width: 50%;
     height: 100%;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
+}
+
+.weather_info > h1{
+    color: aliceblue;
 }
 
 .searchBar__form{

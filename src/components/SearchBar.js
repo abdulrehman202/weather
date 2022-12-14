@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './SearchBar.css';
+import WeatherCard from './WeatherCard.js';
 
 function SearchBar(){
     
@@ -45,7 +46,19 @@ function SearchBar(){
             </form>
 
             {showPanel?<div className='weather_info'>
+                
                 <h1 >{cityName}</h1>
+                <div className='outer__weather'>
+                    <div className='inner__weather'>
+                    <span className='weather__Card'><WeatherCard /></span>
+                    <span className='weather__Card'><WeatherCard /></span>
+                    </div>
+
+                    <div className='inner__weather'>
+                    <span className='weather__Card'><WeatherCard /></span>
+                    <span className='weather__Card'><WeatherCard /></span>
+                    </div>
+                </div>
                 
             </div>:<div></div>}
 
