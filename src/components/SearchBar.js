@@ -4,6 +4,9 @@ import './SearchBar.css';
 function SearchBar(){
     
   const [cityName, setMessage] = useState('');
+  const [showPanel, setPanelVisibility] = useState(false);
+  const [weatherData, setWeatherData] = useState({});
+
 
   const handleChange = event => {
     setMessage(event.target.value);
@@ -11,10 +14,12 @@ function SearchBar(){
 
     async function showWeather(event)
     {
+        setPanelVisibility(true);
         event.preventDefault();
         console.log('City Name is ', cityName); 
         let data = await fetchData();
         console.log('Data is ', data);
+        setWeatherData(data);
                
     }
 
@@ -39,10 +44,10 @@ function SearchBar(){
                 </div>
             </form>
 
-            <div className='weather_info'>
+            {showPanel?<div className='weather_info'>
                 <h1 >{cityName}</h1>
                 
-            </div>
+            </div>:<div></div>}
 
         </div>
     );
