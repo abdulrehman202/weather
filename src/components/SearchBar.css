@@ -11,7 +11,11 @@
   transform: translate(-50%, -50%);
 
 }
-
+.closeButton{
+    float: right;
+    margin: 15px;
+    background-color: rgb(84, 84, 255);
+}
 .weather__Card{
     float: left;
     width: 46%;

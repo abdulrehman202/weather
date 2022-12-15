@@ -46,7 +46,10 @@ function SearchBar(){
             </form>
 
             {showPanel?<div className='weather_info'>
-                
+            <div className='closeButton'>
+                <button className='submitButton' onClick={(e) => {setPanelVisibility(false)}}>
+                    Close
+                </button></div>
                 <h1 >{cityName}</h1>
                 <div className='outer__weather'>
                     <div className='inner__weather'>
