@@ -57,7 +57,7 @@ function SearchBar(){
                     </div>
 
                     <div className='inner__weather'>
-                    <span className='weather__Card'><WeatherCard heading='Temperature' img = 'https://cdn-icons-png.flaticon.com/512/3815/3815449.png' data= {'Min: '+  weatherData.main.temp_min+'~Max: '+weatherData.main.temp_max}  /></span>
+                    <span className='weather__Card'><WeatherCard heading='Temperature' img = 'https://cdn-icons-png.flaticon.com/512/3815/3815449.png' data= {'Min: '+  Math.round(weatherData.main.temp_min-273.15)+'℃' +' ~ Max: '+Math.round(weatherData.main.temp_max-273.15)+'℃' }  /></span>
                     <span className='weather__Card'><WeatherCard heading='Humidity' img = 'https://cdn-icons-png.flaticon.com/512/481/481453.png' data= { weatherData.main.humidity}  /></span>
                     </div>
                 </div>
