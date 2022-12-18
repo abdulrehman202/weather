@@ -52,13 +52,13 @@ function SearchBar(){
                 <h1 >{cityName}</h1>
                 <div className='outer__weather'>
                     <div className='inner__weather'>
-                    <span className='weather__Card'><WeatherCard heading='Co-ordinates' img = '' data= {'Lat:'+  weatherData.coord.lat+' Lon: '+weatherData.coord.lon} /></span>
-                    <span className='weather__Card'><WeatherCard heading='Weather' img = '' data= {weatherData.weather.main} /></span>
+                    <span className='weather__Card'><WeatherCard heading='Co-ordinates' img = 'http://openweathermap.org/img/wn/10d@2x.png' data= {'Lat: '+  weatherData.coord.lat+'     Lon: '+weatherData.coord.lon} /></span>
+                    <span className='weather__Card'><WeatherCard heading='Weather' img = {'http://openweathermap.org/img/wn/'+weatherData.weather[0].icon+'@2x.png'} data= {weatherData.weather[0].main} /></span>
                     </div>
 
                     <div className='inner__weather'>
-                    <span className='weather__Card'><WeatherCard heading='Temperature' img = '' data= {'Min:'+  weatherData.main.temp_min+' Max: '+weatherData.main.temp_max}  /></span>
-                    <span className='weather__Card'><WeatherCard heading='Humidity' img = '' data= { weatherData.main.humidity}  /></span>
+                    <span className='weather__Card'><WeatherCard heading='Temperature' img = 'http://openweathermap.org/img/wn/10d@2x.png' data= {'Min:'+  weatherData.main.temp_min+' Max: '+weatherData.main.temp_max}  /></span>
+                    <span className='weather__Card'><WeatherCard heading='Humidity' img = 'http://openweathermap.org/img/wn/10d@2x.png' data= { weatherData.main.humidity}  /></span>
                     </div>
                 </div>
                 
