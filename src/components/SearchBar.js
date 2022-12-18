@@ -15,10 +15,11 @@ function SearchBar(){
 
     async function showWeather(event)
     {
-        setPanelVisibility(true);
         event.preventDefault();
         let data = await fetchData();
         Object.assign(weatherData, data);
+        console.log('Weatheer data is ', weatherData);
+        setPanelVisibility(true);
                
     }
 
@@ -51,13 +52,13 @@ function SearchBar(){
                 <h1 >{cityName}</h1>
                 <div className='outer__weather'>
                     <div className='inner__weather'>
-                    <span className='weather__Card'><WeatherCard /></span>
-                    <span className='weather__Card'><WeatherCard /></span>
+                    <span className='weather__Card'><WeatherCard heading='Co-ordinates' img = '' data= {'Lat:'+  weatherData.coord.lat+' Lon: '+weatherData.coord.lon} /></span>
+                    <span className='weather__Card'><WeatherCard heading='Weather' img = '' data= {weatherData.weather.main} /></span>
                     </div>
 
                     <div className='inner__weather'>
-                    <span className='weather__Card'><WeatherCard /></span>
-                    <span className='weather__Card'><WeatherCard /></span>
+                    <span className='weather__Card'><WeatherCard heading='Temperature' img = '' data= {'Min:'+  weatherData.main.temp_min+' Max: '+weatherData.main.temp_max}  /></span>
+                    <span className='weather__Card'><WeatherCard heading='Humidity' img = '' data= { weatherData.main.humidity}  /></span>
                     </div>
                 </div>
                 
