@@ -17,10 +17,8 @@ function SearchBar(){
     {
         setPanelVisibility(true);
         event.preventDefault();
-        console.log('City Name is ', cityName); 
         let data = await fetchData();
-        console.log('Data is ', data);
-        setWeatherData(data);
+        Object.assign(weatherData, data);
                
     }
 
