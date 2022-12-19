@@ -15,6 +15,7 @@ function SearchBar(){
 
     async function showWeather(event)
     {
+        setPanelVisibility(false);
         event.preventDefault();
         let data = await fetchData();
         Object.assign(weatherData, data);
