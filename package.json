@@ -2,13 +2,14 @@
   "name": "weather",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://abdulrehman202.github.io/weather",
+  "homepage": "http://abdulrehman202.github.io/weather",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.7",
     "web-vitals": "^2.1.4"
@@ -19,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b -d build"
   },
   "eslintConfig": {
     "extends": [
