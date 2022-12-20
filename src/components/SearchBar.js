@@ -42,7 +42,7 @@ function SearchBar(){
     }
 
     return(
-        <BrowserRouter basename='/'>
+        // <BrowserRouter basename='/'>
         <div className='searchBar'>
             
             {!isLoading?<form className='searchBar__form'>
@@ -74,7 +74,8 @@ function SearchBar(){
                 
             </div>:<div></div>}
 
-        </div></BrowserRouter>
+        </div>
+        // </BrowserRouter>
     );
 }
 
