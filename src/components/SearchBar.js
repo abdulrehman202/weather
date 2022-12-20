@@ -32,7 +32,7 @@ function SearchBar(){
 
     async function fetchData()
     {
-        let api = 'http://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid='+process.env.REACT_APP_API_KEY;
+        let api = process.env.REACT_APP_API_URL+'q='+cityName+'&appid='+process.env.REACT_APP_API_KEY;
         //This function makes the api call and returns the fetched Data
         let response = await fetch(api);
         let data = await response.json();
