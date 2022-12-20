@@ -48,7 +48,7 @@ function SearchBar(){
                     Go
                 </button>
                 </div>
-            </form>:<div><ClipLoader/></div>}
+            </form>:<div className='loader'><ClipLoader/></div>}
 
             {showPanel?<div className='weather_info'>
             <div className='closeButton'>

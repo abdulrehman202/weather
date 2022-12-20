@@ -13,5 +13,4 @@ function WeatherCard({heading, img, data})
     </div>)
 }
 
-//39 &#176;C
 export default WeatherCard;

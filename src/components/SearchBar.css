@@ -57,14 +57,14 @@
 }
 
 .form__inputs{
-    background-color: transparent;
+    background-color: whitesmoke;
     backdrop-filter: blur(100px);
     border-radius: 15px;
 }
 
 .textBox{
     background-color: transparent;
-    color: white;
+    color: black;
     margin: 5px;
     height: 30px;
     width: 400px;
@@ -75,7 +75,7 @@
     outline: none;
 }
 .submitButton{
-    color: white;
+    color: black;
     background-color: transparent;
     margin: 5px;
     height: 35px;
@@ -96,4 +96,9 @@
 
   h1{
     padding: 20px;
+  }
+
+
+  .loader{
+    background-color: aliceblue;
   }
