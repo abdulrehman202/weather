@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './SearchBar.css';
 import WeatherCard from './WeatherCard.js';
 import ClipLoader from 'react-spinners/ClipLoader';
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 function SearchBar(){
     
@@ -42,7 +42,7 @@ function SearchBar(){
     }
 
     return(
-        <HashRouter basename='/'>
+        <BrowserRouter basename='/'>
         <div className='searchBar'>
             
             {!isLoading?<form className='searchBar__form'>
@@ -74,7 +74,7 @@ function SearchBar(){
                 
             </div>:<div></div>}
 
-        </div></HashRouter>
+        </div></BrowserRouter>
     );
 }
 
