@@ -8,6 +8,8 @@ function SearchBar(){
   const [cityName, setMessage] = useState('');
   const [showPanel, setPanelVisibility] = useState(false);
   const [weatherData, setWeatherData] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  
 
 
   const handleChange = event => {
@@ -17,10 +19,12 @@ function SearchBar(){
     async function showWeather(event)
     {
         setPanelVisibility(false);
+        setIsLoading(true);
         event.preventDefault();
         let data = await fetchData();
         Object.assign(weatherData, data);
         console.log('Weatheer data is ', weatherData);
+        setIsLoading(false);
         setPanelVisibility(true);
                
     }
@@ -37,14 +41,14 @@ function SearchBar(){
     return(
         <div className='searchBar'>
             
-            <form className='searchBar__form'>
+            {!isLoading?<form className='searchBar__form'>
                 <div className='form__inputs'>
                 <input className='textBox' type= 'text' placeholder='Enter city name'  value={cityName} onChange={handleChange}></input>
                 <button className='submitButton' onClick={(e) => {showWeather(e)}}>
                     Go
                 </button>
                 </div>
-            </form>
+            </form>:<div><ClipLoader/></div>}
 
             {showPanel?<div className='weather_info'>
             <div className='closeButton'>
@@ -64,7 +68,7 @@ function SearchBar(){
                 </div></>):<span><WeatherCard heading='Error!' img='https://cdn-icons-png.flaticon.com/512/5974/5974771.png' data='  ' /></span>
                         }
                 
-            </div>:<div><ClipLoader/></div>}
+            </div>:<div></div>}
 
         </div>
     );
